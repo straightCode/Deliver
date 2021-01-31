@@ -1,0 +1,133 @@
+@import "zero-style.scss";
+@import "vars.scss";
+@import "fonts.scss";
+
+
+@import "blocks/header.scss";
+@import "blocks/services.scss";
+@import "blocks/about.scss";
+@import "blocks/express-logistics.scss";
+@import "blocks/features.scss";
+@import "blocks/client.scss";
+@import "blocks/footer.scss";
+
+
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.container {
+    max-width: 1190px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 28px;
+    background-color: $yellow;
+    border-radius: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $red;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 2px solid $yellow;
+    transition: all .1s linear;
+    &:hover {
+        box-shadow: 0 15px 20px 1px rgba(255, 204, 0, .5);
+    }
+    &.btn-white {
+        color: white;
+        background-color: transparent;
+        border: 2px solid #fff;
+        box-shadow: none;
+    }
+    &.btn-sm {
+        padding: 20px 48px;
+        font-size: 12px;
+        color: $red;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 20px;
+    }
+    &.square__btn {
+        border: 0;
+        border-radius: 0;
+        margin: 0;
+        box-shadow: 0 15px 20px 1px rgba(255, 204, 0, .5);
+        transition: all .1s linear;
+        display: block;
+        letter-spacing: 3px;
+        &:hover {
+            background-color: $red;
+            box-shadow: none;
+            color: #fff;
+        }
+        &.active {
+            background-color: $red;
+            box-shadow: none;
+            color: #fff;
+        }
+    }
+    &.btn-red{
+        padding: 20px 30px;
+        background-color: #a00000;
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase;
+        border: 1px solid $red;
+        &:hover{
+            box-shadow: none;
+            background-color: #860000;
+            border: 3px solid #760000;
+        }
+    }
+}
+.burger {
+    display: none;
+}
+
+@media (max-width: 945px) {
+    .burger {
+        display: block;
+        width: 35px;
+        height: 4px;
+        background-color: $red;
+        position: absolute;
+        top: 25px;
+        right: 80px;
+        border-radius: 4px;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 35px;
+            height: 4px;
+            background-color: $red;
+            top: 9px;
+            left: 0px;
+            position: absolute;
+            border-radius: 4px;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 35px;
+            height: 4px;
+            background-color: $red;
+            top: -9px;
+            left: 0px;
+            position: absolute;
+            border-radius: 4px;
+        }
+    }
+}
+
+

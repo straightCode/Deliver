@@ -1,0 +1,40 @@
+.client {
+    padding: 60px 0;
+    @media(max-width: 650px){
+        padding: 20px 0;
+    }
+}
+
+.client__inner {
+    display: flex;
+    max-width: 100%;
+    @media(max-width: 950px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.client__item {
+    flex: 1 1 25%;
+    margin: 20px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    background-color: #f9f9f9;
+    border: 2px solid #eedbdb;
+    transition: all .1s linear;
+    img{
+        width: 100%;
+    }
+    &:hover {
+        border-color: #ba0000;
+    }
+    @media(max-width: 950px){
+        flex: 0 0 26%;
+    }
+    @media(max-width: 650px){
+        flex: 0 0 50%;
+    }
+}
